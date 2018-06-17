@@ -1,0 +1,5 @@
+db.log_chat_chat.remove ( { "mibo_id": "mibo_id" })
+db.log_chat_intent.remove ( { "mibo_id": "mibo_id" })
+
+mongoexport --host 10.161.4.103 --db uat-chat --collection log_chat_chat --username chat --password 8888 --csv --out chat.csv --fields dialog
+mongoexport --host 10.161.4.103 --db uat-chat --collection log_chat_intent --username chat --password 8888 --csv --out intent.csv --fields dialog
